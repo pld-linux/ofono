@@ -1,0 +1,10 @@
+--- ofono-1.12/src/storage.h.orig	2011-10-11 20:21:45.000000000 +0200
++++ ofono-1.12/src/storage.h	2013-01-08 17:56:33.897465072 +0100
+@@ -26,6 +26,7 @@
+ #endif
+ 
+ #include <fcntl.h>
++#include <stdio.h>
+ 
+ int create_dirs(const char *filename, const mode_t mode);
+ 
