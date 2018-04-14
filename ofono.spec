@@ -1,15 +1,17 @@
 Summary:	oFono - Open Source Telephony
 Summary(pl.UTF-8):	oFono - telefonia o otwartych źródłach
 Name:		ofono
-Version:	1.20
+Version:	1.23
 Release:	1
 License:	GPL v2
 Group:		Networking/Daemons
 Source0:	https://www.kernel.org/pub/linux/network/ofono/%{name}-%{version}.tar.xz
-# Source0-md5:	fad0630fce6a9aecdb7db37bc1f1db7d
+# Source0-md5:	27ea2f1a155231af49d520486b8ebc05
+Patch0:		%{name}-missing.patch
 URL:		https://01.org/ofono
 BuildRequires:	bluez-libs-devel >= 4.99
 BuildRequires:	dbus-devel >= 1.4
+BuildRequires:	ell-devel >= 0.2
 BuildRequires:	gcc >= 5:3.4
 BuildRequires:	glib2-devel >= 1:2.32
 BuildRequires:	libusb-devel >= 1.0
@@ -56,11 +58,14 @@ Pliki nagłówkowe dla wtyczek oFono.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
 	--disable-silent-rules \
 	--enable-dundee \
+	--enable-ell \
+	--enable-mbimmodem \
 	--enable-pie \
 	--enable-threads \
 	--enable-tools
