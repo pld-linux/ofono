@@ -1,12 +1,12 @@
 Summary:	oFono - Open Source Telephony
 Summary(pl.UTF-8):	oFono - telefonia o otwartych źródłach
 Name:		ofono
-Version:	1.28
+Version:	1.29
 Release:	1
 License:	GPL v2
 Group:		Networking/Daemons
 Source0:	https://www.kernel.org/pub/linux/network/ofono/%{name}-%{version}.tar.xz
-# Source0-md5:	3a5406565b552b16602610619b034967
+# Source0-md5:	4fa0372630ff03f223452e4d05efa8f8
 URL:		https://01.org/ofono
 BuildRequires:	bluez-libs-devel >= 4.99
 BuildRequires:	dbus-devel >= 1.4
