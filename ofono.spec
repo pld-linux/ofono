@@ -1,29 +1,28 @@
 Summary:	oFono - Open Source Telephony
 Summary(pl.UTF-8):	oFono - telefonia o otwartych źródłach
 Name:		ofono
-Version:	1.31
+Version:	1.32
 Release:	1
 License:	GPL v2
 Group:		Networking/Daemons
 Source0:	https://www.kernel.org/pub/linux/network/ofono/%{name}-%{version}.tar.xz
-# Source0-md5:	1c26340e3c6ed132cc812595081bb3dc
+# Source0-md5:	7496b3b89ab84bfb4ccfc26cda3fdf5e
 URL:		https://01.org/ofono
-BuildRequires:	bluez-libs-devel >= 4.99
-BuildRequires:	dbus-devel >= 1.4
+BuildRequires:	dbus-devel >= 1.6
 BuildRequires:	ell-devel >= 0.12
 BuildRequires:	gcc >= 5:3.4
-BuildRequires:	glib2-devel >= 1:2.32
+BuildRequires:	glib2-devel >= 1:2.68
 BuildRequires:	libusb-devel >= 1.0
 BuildRequires:	mobile-broadband-provider-info-devel
 BuildRequires:	pkgconfig
 BuildRequires:	sed >= 4.0
-BuildRequires:	systemd-devel
+BuildRequires:	systemd-units
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	udev-devel >= 1:143
 BuildRequires:	xz
-Requires:	dbus >= 1.4
+Requires:	dbus >= 1.6
 Requires:	ell >= 0.12
-Requires:	glib2 >= 1:2.32
+Requires:	glib2 >= 1:2.68
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,8 +46,8 @@ backendami do przechowywania danych.
 Summary:	Header files for oFono plugins
 Summary(pl.UTF-8):	Pliki nagłówkowe dla wtyczek oFono
 Group:		Development/Libraries
-Requires:	dbus-devel >= 1.4
-Requires:	glib2-devel >= 1:2.32
+Requires:	dbus-devel >= 1.6
+Requires:	glib2-devel >= 1:2.68
 # doesn't require base
 
 %description devel
