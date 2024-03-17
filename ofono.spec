@@ -1,15 +1,15 @@
 Summary:	oFono - Open Source Telephony
 Summary(pl.UTF-8):	oFono - telefonia o otwartych źródłach
 Name:		ofono
-Version:	2.2
+Version:	2.5
 Release:	1
 License:	GPL v2
 Group:		Networking/Daemons
 Source0:	https://www.kernel.org/pub/linux/network/ofono/%{name}-%{version}.tar.xz
-# Source0-md5:	f1906989e47548dc62c6cb9f9148a97d
+# Source0-md5:	cb98d1b29ed2b0b9ae70cb15ca3164c7
 URL:		https://01.org/ofono
 BuildRequires:	dbus-devel >= 1.6
-BuildRequires:	ell-devel >= 0.12
+BuildRequires:	ell-devel >= 0.62
 BuildRequires:	gcc >= 5:3.4
 BuildRequires:	glib2-devel >= 1:2.68
 BuildRequires:	libusb-devel >= 1.0
@@ -21,7 +21,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	udev-devel >= 1:143
 BuildRequires:	xz
 Requires:	dbus >= 1.6
-Requires:	ell >= 0.12
+Requires:	ell >= 0.62
 Requires:	glib2 >= 1:2.68
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -93,6 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/ofono/plugins
 %dir %{_sysconfdir}/ofono
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/ofono/phonesim.conf
+%{_datadir}/ofono
 /etc/dbus-1/system.d/dundee.conf
 /etc/dbus-1/system.d/ofono.conf
 /lib/systemd/system/dundee.service
