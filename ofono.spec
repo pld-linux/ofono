@@ -1,15 +1,15 @@
 Summary:	oFono - Open Source Telephony
 Summary(pl.UTF-8):	oFono - telefonia o otwartych źródłach
 Name:		ofono
-Version:	2.17
+Version:	2.18
 Release:	1
 License:	GPL v2
 Group:		Networking/Daemons
 Source0:	https://www.kernel.org/pub/linux/network/ofono/%{name}-%{version}.tar.xz
-# Source0-md5:	cc16a509ff9d9ffcf1536be1fd525ca8
+# Source0-md5:	77ac81ccf9341a0a89181b5d85745f55
 URL:		https://01.org/ofono
 BuildRequires:	dbus-devel >= 1.6
-BuildRequires:	ell-devel >= 0.70
+BuildRequires:	ell-devel >= 0.79
 BuildRequires:	gcc >= 5:3.4
 BuildRequires:	glib2-devel >= 1:2.68
 BuildRequires:	libusb-devel >= 1.0
@@ -21,7 +21,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	udev-devel >= 1:143
 BuildRequires:	xz
 Requires:	dbus >= 1.6
-Requires:	ell >= 0.70
+Requires:	ell >= 0.79
 Requires:	glib2 >= 1:2.68
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
